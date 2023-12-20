@@ -2,7 +2,7 @@
 this is a script that exploits the CVE-2023-27163 vulnerability which is an SSRF in the request-baskets version 1.2.1
 
 # SSRF on Request-Baskets (CVE-2023–27163)
-CVE-2023–27163 represents a critical Server-Side Request Forgery (SSRF) vulnerability that was identified in Request-Baskets, affecting all versions up to and including 1.2.1. This particular vulnerability grants malicious actors the ability to gain unauthorized access to network resources and sensitive information by exploiting the /api/baskets/{name} component through carefully crafted API requests.
+CVE-2023–27163 represents a critical Server-Side Request Forgery (SSRF) vulnerability that was identified in Request-Baskets, affecting all versions up to 1.2.1. This particular vulnerability grants malicious actors the ability to gain unauthorized access to network resources and sensitive information by exploiting the /api/baskets/{name} component through carefully crafted API requests.
 
 # How it works
 Request-Baskets is a web application designed to collect and log incoming HTTP requests directed to specific endpoints known as “baskets”. During the creation of these baskets, users have the flexibility to specify alternative servers to which these requests should be forwarded. The critical issue is that users can inadvertently specify services they shouldn’t have access to, including those typically restricted within a network environment.
